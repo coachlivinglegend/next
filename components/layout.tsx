@@ -7,7 +7,12 @@ import Link from 'next/link'
 const name = 'Living Legend'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }) {
+interface LayoutProps {
+  children: JSX.Element[] | JSX.Element,
+  home? : boolean
+}
+
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>

@@ -1,11 +1,12 @@
 import Head from 'next/head';
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 
-export async function getStaticProps() {
+export const getStaticProps:GetStaticProps = () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -23,7 +24,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I'm Daniel. I'm a software engineer and a
+          Hello, I'm Daniel and this is for vercel. I'm a software engineer and a
           translator(English/Yoruba). You can contact me on{' '}
           <a href='#'>Twitter</a>
         </p>
