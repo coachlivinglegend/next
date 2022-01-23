@@ -23,7 +23,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hello, I'm Daniel. I'm a software engineer and a
+          Hello, I'm Daniel and this is for vercel. I'm a software engineer and a
           translator(English/Yoruba). You can contact me on{' '}
           <a href='#'>Twitter</a>
         </p>
